@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+contracts/node_modules
+contracts/.env
+contracts/cache
+contracts/artifacts
+art/__pycache__

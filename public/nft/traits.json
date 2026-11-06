@@ -1,0 +1,147 @@
+{
+ "total": 10000,
+ "traits": {
+  "Sky": {
+   "Day Blue": 1734,
+   "Mint Sky": 1002,
+   "Storm": 571,
+   "Night": 1022,
+   "Elysian Gold": 394,
+   "Aurora": 521,
+   "Sunset": 991,
+   "Lavender": 930,
+   "Hyper Teal": 794,
+   "Deep Space": 220,
+   "Dawn Pink": 1016,
+   "Golden Hour": 805
+  },
+  "Clouds": {
+   "Cloud Bed": 1016,
+   "Few": 4458,
+   "None": 1878,
+   "Many": 2648
+  },
+  "Sky Extra": {
+   "None": 3979,
+   "Sun": 1193,
+   "Shooting Star": 680,
+   "Birds": 1457,
+   "Tiny Balloons": 1217,
+   "Moon": 593,
+   "Plane": 491,
+   "Rainbow": 390
+  },
+  "Balloon": {
+   "Party": 6150,
+   "Hot Air": 2605,
+   "Heart": 933,
+   "Twin Knot": 312
+  },
+  "Color": {
+   "Chrome": 148,
+   "Lemon": 843,
+   "Coral": 681,
+   "Onyx": 412,
+   "Cherry": 1032,
+   "Ocean": 906,
+   "Gold": 187,
+   "Sky": 791,
+   "Lime": 829,
+   "Mint": 672,
+   "Grape": 745,
+   "Tangerine": 870,
+   "Snow": 479,
+   "Bubblegum": 869,
+   "Hyper": 393,
+   "Rainbow": 143
+  },
+  "Pattern": {
+   "Solid": 4305,
+   "Sparkle": 403,
+   "Stripes": 1505,
+   "Zigzag": 782,
+   "Checker": 554,
+   "Two Tone": 1089,
+   "Polka": 1362
+  },
+  "Pattern Color": {
+   "None": 4708,
+   "Snow": 468,
+   "Tangerine": 453,
+   "Bubblegum": 445,
+   "Lime": 436,
+   "Lemon": 449,
+   "Coral": 420,
+   "Cherry": 436,
+   "Ocean": 414,
+   "Grape": 431,
+   "Sky": 436,
+   "Onyx": 429,
+   "Mint": 475
+  },
+  "Eyes": {
+   "Shiny": 1711,
+   "Hearts": 590,
+   "Angry": 601,
+   "Happy": 1228,
+   "Stars": 504,
+   "Dots": 1750,
+   "Laser": 203,
+   "Sleepy": 792,
+   "X Eyes": 400,
+   "Wink": 803,
+   "Hidden": 165,
+   "Googly": 705,
+   "Teary": 548
+  },
+  "Mouth": {
+   "Smirk": 942,
+   "Tongue": 954,
+   "Fangs": 481,
+   "O": 1020,
+   "Cat": 776,
+   "Flat": 738,
+   "Bubblegum": 480,
+   "Smile": 2179,
+   "Frown": 620,
+   "Big Grin": 1423,
+   "Teeth": 387
+  },
+  "Cheeks": {
+   "Freckles": 521,
+   "None": 5440,
+   "Blush": 4039
+  },
+  "Headwear": {
+   "Cowboy": 360,
+   "Party Hat": 941,
+   "Top Hat": 554,
+   "None": 3595,
+   "Propeller": 553,
+   "Horns": 283,
+   "Crown": 358,
+   "Antenna": 337,
+   "Flower": 543,
+   "Halo": 403,
+   "Beanie": 703,
+   "Cap": 715,
+   "Bow": 377,
+   "Wizard": 278
+  },
+  "Eyewear": {
+   "None": 7839,
+   "VR": 165,
+   "Nerd Glasses": 406,
+   "Monocle": 328,
+   "Shades": 867,
+   "3D Glasses": 395
+  },
+  "Legendary": {
+   "Hyper Spirit": 1,
+   "Cosmic Drifter": 1,
+   "The Elysian": 1,
+   "Rainbow King": 1,
+   "Night Wizard": 1
+  }
+ }
+}
