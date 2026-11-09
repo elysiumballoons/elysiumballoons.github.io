@@ -12,9 +12,9 @@ Set these environment variables in the host:
 
 | Variable | Value |
 |---|---|
-| `VITE_ELYSIUM_RPC` | official Elysium mainnet RPC (Kinetiq publishes it at launch) |
+| `VITE_ELYSIUM_RPC` | optional, defaults to the official `https://rpc.elysium.kinetiq.xyz` |
 | `VITE_CONTRACT_ADDRESS` | your contract address (step 3) |
-| `VITE_BRIDGE_URL` | bridge link (defaults to https://elysianfields.fun/bridge — replace with the official Kinetiq bridge) |
+| `VITE_BRIDGE_URL` | bridge link (defaults to the official https://elysium.kinetiq.xyz) |
 | `VITE_X_URL` | your X account |
 | `VITE_WC_PROJECT_ID` | optional, WalletConnect project id for mobile QR |
 | `VITE_NETWORK` | `testnet` to test on Elysium testnet (99801) |

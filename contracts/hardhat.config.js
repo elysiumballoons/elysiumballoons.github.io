@@ -9,10 +9,9 @@ module.exports = {
     settings: { optimizer: { enabled: true, runs: 200 }, evmVersion: "cancun" },
   },
   networks: {
-    // Elysium mainnet (opens 9 Nov 2026). Chain ID 99901.
-    // Put the OFFICIAL public RPC from Kinetiq in .env as ELYSIUM_RPC once it is published.
+    // Elysium mainnet. Chain ID 99901. Official public RPC from Kinetiq docs.
     elysium: {
-      url: process.env.ELYSIUM_RPC || "https://REPLACE-WITH-OFFICIAL-ELYSIUM-RPC",
+      url: process.env.ELYSIUM_RPC || "https://rpc.elysium.kinetiq.xyz",
       chainId: 99901,
       accounts,
     },
