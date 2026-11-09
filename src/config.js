@@ -8,7 +8,7 @@ import { defineChain } from "viem";
 export const NETWORK = import.meta.env.VITE_NETWORK === "testnet" ? "testnet" : "mainnet";
 
 // Paste the address printed by `npm run deploy:mainnet` (contracts folder)
-export const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS || "";
+export const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS || "0xA1df38bEbd8da5ae5014899b283BADA100868569";
 
 // Bridge HyperEVM -> Elysium (official Kinetiq app). Override with VITE_BRIDGE_URL if Kinetiq gives a direct bridge page.
 export const BRIDGE_URL = import.meta.env.VITE_BRIDGE_URL || "https://elysium.kinetiq.xyz";
