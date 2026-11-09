@@ -7,7 +7,8 @@
     "deploy:testnet": "hardhat run scripts/deploy.js --network elysiumTestnet",
     "deploy:mainnet": "hardhat run scripts/deploy.js --network elysium",
     "open-mint": "hardhat run scripts/open-mint.js --network elysium",
-    "withdraw": "hardhat run scripts/withdraw.js --network elysium"
+    "withdraw": "hardhat run scripts/withdraw.js --network elysium",
+    "set-base-uri": "hardhat run scripts/set-base-uri.js --network elysium"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^3.0.8",
