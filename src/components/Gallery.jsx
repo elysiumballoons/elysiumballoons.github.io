@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { COLLECTION_SIZE } from "../config";
 
 const pick = (n) => {
@@ -47,7 +48,7 @@ export default function Gallery() {
         ))}
       </div>
 
-      {sel && (
+      {sel && createPortal(
         <div className="modal-back" onClick={() => setSel(null)}>
           <div className="modal modal-wide pixel-box" role="dialog" aria-label={`Balloon #${sel}`} onClick={(e) => e.stopPropagation()}>
             <img className="px detail-img" src={`/nft/images/${sel}.png`} alt={`Elysium Balloon #${sel}`} />
@@ -63,7 +64,8 @@ export default function Gallery() {
               </dl>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );

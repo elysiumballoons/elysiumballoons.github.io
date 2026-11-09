@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { useAccount, useConnect, useDisconnect, useBalance, useSwitchChain } from "wagmi";
 import { TARGET_CHAIN } from "../config";
 
@@ -41,7 +42,7 @@ export function ConnectModal({ onClose }) {
   // Prefer discovered wallets (EIP-6963); hide the generic "Injected" entry when real ones exist.
   const named = connectors.filter((c) => c.id !== "injected");
   const list = named.length ? named : connectors;
-  return (
+  return createPortal(
     <div className="modal-back" onClick={onClose}>
       <div className="modal pixel-box" role="dialog" aria-label="Connect a wallet" onClick={(e) => e.stopPropagation()}>
         <div className="modal-head">
@@ -64,6 +65,7 @@ export function ConnectModal({ onClose }) {
         {error && <p className="err">{error.shortMessage || error.message}</p>}
         <p className="fine">No wallet? Install Rabby or MetaMask, then refresh this page.</p>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

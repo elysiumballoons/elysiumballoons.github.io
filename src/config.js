@@ -8,7 +8,10 @@ import { defineChain } from "viem";
 export const NETWORK = import.meta.env.VITE_NETWORK === "testnet" ? "testnet" : "mainnet";
 
 // Paste the address printed by `npm run deploy:mainnet` (contracts folder)
-export const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS || "0xA1df38bEbd8da5ae5014899b283BADA100868569";
+const DEPLOYED = "0xA1df38bEbd8da5ae5014899b283BADA100868569";
+const envAddr = (import.meta.env.VITE_CONTRACT_ADDRESS || "").trim();
+// Only use the env value if it is a real address; otherwise fall back to the deployed mainnet contract.
+export const CONTRACT_ADDRESS = /^0x[0-9a-fA-F]{40}$/.test(envAddr) ? envAddr : DEPLOYED;
 
 // Bridge HyperEVM -> Elysium (official Kinetiq app). Override with VITE_BRIDGE_URL if Kinetiq gives a direct bridge page.
 export const BRIDGE_URL = import.meta.env.VITE_BRIDGE_URL || "https://elysium.kinetiq.xyz";
@@ -21,7 +24,7 @@ export const elysium = defineChain({
   name: "Elysium",
   nativeCurrency: { name: "HYPE", symbol: "HYPE", decimals: 18 },
   // Official public RPC from Kinetiq docs. For heavy traffic use Alchemy: https://elysium-mainnet.g.alchemy.com/v2/KEY
-  rpcUrls: { default: { http: [import.meta.env.VITE_ELYSIUM_RPC || "https://rpc.elysium.kinetiq.xyz"] } },
+  rpcUrls: { default: { http: [/^https:\/\//.test(import.meta.env.VITE_ELYSIUM_RPC || "") && !/elysp\.com/.test(import.meta.env.VITE_ELYSIUM_RPC) ? import.meta.env.VITE_ELYSIUM_RPC : "https://rpc.elysium.kinetiq.xyz"] } },
   blockExplorers: { default: { name: "Elysium Explorer", url: "https://elysium.kinetiq.xyz/explorer" } },
 });
 
