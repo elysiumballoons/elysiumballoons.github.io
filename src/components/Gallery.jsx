@@ -17,7 +17,7 @@ export default function Gallery() {
   useEffect(() => {
     if (!sel) return;
     setMeta(null);
-    fetch(`/nft/metadata/${sel}.json`).then((r) => r.json()).then(setMeta).catch(() => setMeta({ attributes: [] }));
+    fetch(`${import.meta.env.BASE_URL}nft/metadata/${sel}.json`).then((r) => r.json()).then(setMeta).catch(() => setMeta({ attributes: [] }));
     const onKey = (e) => e.key === "Escape" && setSel(null);
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -42,7 +42,7 @@ export default function Gallery() {
       <div className="grid">
         {ids.map((id) => (
           <button key={id} className="tile" onClick={() => setSel(id)} aria-label={`Open balloon #${id}`}>
-            <img className="px" src={`/nft/images/${id}.png`} alt="" loading="lazy" />
+            <img className="px" src={`${import.meta.env.BASE_URL}nft/images/${id}.png`} alt="" loading="lazy" />
             <span>#{id}</span>
           </button>
         ))}
@@ -51,7 +51,7 @@ export default function Gallery() {
       {sel && createPortal(
         <div className="modal-back" onClick={() => setSel(null)}>
           <div className="modal modal-wide pixel-box" role="dialog" aria-label={`Balloon #${sel}`} onClick={(e) => e.stopPropagation()}>
-            <img className="px detail-img" src={`/nft/images/${sel}.png`} alt={`Elysium Balloon #${sel}`} />
+            <img className="px detail-img" src={`${import.meta.env.BASE_URL}nft/images/${sel}.png`} alt={`Elysium Balloon #${sel}`} />
             <div className="detail">
               <div className="modal-head">
                 <h3>{meta?.name || `Elysium Balloon #${sel}`}</h3>

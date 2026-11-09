@@ -12,7 +12,7 @@ export default function App() {
       <Sky />
       <header className="nav">
         <a href="#top" className="brand">
-          <img className="px" src="/nft/images/1.png" alt="" />
+          <img className="px" src={`${import.meta.env.BASE_URL}nft/images/1.png`} alt="" />
           <span>Elysium Balloons</span>
         </a>
         <nav className="links">

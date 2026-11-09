@@ -128,7 +128,7 @@ export default function MintPanel() {
           <div className="minted-grid">
             {newIds.slice(0, 12).map((id) => (
               <figure key={id}>
-                <img className="px" src={`/nft/images/${id}.png`} alt={`Elysium Balloon #${id}`} />
+                <img className="px" src={`${import.meta.env.BASE_URL}nft/images/${id}.png`} alt={`Elysium Balloon #${id}`} />
                 <figcaption>#{id}</figcaption>
               </figure>
             ))}

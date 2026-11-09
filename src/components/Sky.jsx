@@ -29,7 +29,7 @@ export default function Sky() {
           className={`drift d${b.depth}`}
           style={{ left: `${b.left}%`, width: b.size, animationDuration: `${b.dur}s`, animationDelay: `${b.delay}s`, "--sway": `${b.sway}px` }}
         >
-          <img className="px" src={`/floaters/${b.id}.png`} alt="" loading="lazy" />
+          <img className="px" src={`${import.meta.env.BASE_URL}floaters/${b.id}.png`} alt="" loading="lazy" />
         </div>
       ))}
     </div>

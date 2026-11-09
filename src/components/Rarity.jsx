@@ -5,7 +5,7 @@ const ORDER = ["Balloon", "Color", "Pattern", "Eyes", "Mouth", "Headwear", "Eyew
 export default function Rarity() {
   const [data, setData] = useState(null);
   const [cat, setCat] = useState("Balloon");
-  useEffect(() => { fetch("/nft/traits.json").then((r) => r.json()).then(setData).catch(() => {}); }, []);
+  useEffect(() => { fetch(`${import.meta.env.BASE_URL}nft/traits.json`).then((r) => r.json()).then(setData).catch(() => {}); }, []);
   if (!data) return null;
 
   const rows = Object.entries(data.traits[cat] || {}).sort((a, b) => b[1] - a[1]);
