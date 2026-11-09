@@ -8,7 +8,7 @@ import { defineChain } from "viem";
 export const NETWORK = import.meta.env.VITE_NETWORK === "testnet" ? "testnet" : "mainnet";
 
 // Paste the address printed by `npm run deploy:mainnet` (contracts folder)
-const DEPLOYED = "0xADRESSE_JDIDA";
+const DEPLOYED = "0xBC8B360F987cC50E89CeB4eD86fED54d9F2877be";
 const envAddr = (import.meta.env.VITE_CONTRACT_ADDRESS || "").trim();
 // Only use the env value if it is a real address; otherwise fall back to the deployed mainnet contract.
 export const CONTRACT_ADDRESS = /^0x[0-9a-fA-F]{40}$/.test(envAddr) ? envAddr : DEPLOYED;
