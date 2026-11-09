@@ -6,3 +6,6 @@ contracts/.env
 contracts/cache
 contracts/artifacts
 art/__pycache__
+
+# Local Netlify folder
+.netlify
